@@ -22,11 +22,11 @@ const CreateBooks = () => {
       .then(() => {
         setLoading(false)
         navigate('/')
+      })
       .catch((error) => {
         setLoading(false)
         alert('An error occurred, please check the console!')
         console.log(error)
-      })
       })
   }
 
