@@ -39,3 +39,10 @@ jspm_packages
 
 #Excluding build directory
 public/
+
+#.env file
+.env
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
