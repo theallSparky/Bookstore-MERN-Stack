@@ -7,7 +7,6 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const app = express();
 
 app.use(express.json());
 
@@ -22,17 +21,6 @@ app.use("/books", booksRoute);
 app.use("/books", booksRoute);
 
 mongoose
-  .connect(process.env.mongoDBURL)
-  .then(() => {
-    console.log(`App connected to database!`);
-    app.listen(PORT, () => {
-      console.log(`App is litening to port: ${PORT}`);
-    });
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-
   .connect(process.env.mongoDBURL)
   .then(() => {
     console.log(`App connected to database!`);
